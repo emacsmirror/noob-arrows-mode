@@ -8,7 +8,7 @@ Activating noob-arrows-mode or global-noob-arrows-mode turns the arrow keys into
 Usage
 =====
 
-After turing on the mode, pressing an arrow key will display a help buffer in the corresponding direction of the button press. Pressing another arrow key (or C-x 1) will hide the help buffer. This package comes with an example help file, but any plain text file will work. Thus, you can customize the contents of the help buffer to your needs. All you need to do is set the variable <code>noob-arrows-help-file</code> to a file path that identifies the text file. Typically, this would be set in one of your startup files (presumably ~/.emacs.d/init):
+After turning on the mode, pressing an arrow key will display a help buffer in the corresponding direction of the button press. Pressing another arrow key (or C-x 1) will hide the help buffer. This package comes with an example help file, but any plain text file will work. Thus, you can customize the contents of the help buffer to your needs. All you need to do is set the variable <code>noob-arrows-help-file</code> to a file path that identifies the text file. Typically, this would be set in one of your startup files (presumably ~/.emacs.d/init):
 
 ```lisp
 (setq noob-arrows-help-file "~/.emacs.d/plugins/noob-arrows-mode.el/noob-arrows-help-file.txt")
@@ -20,17 +20,17 @@ Installation
 Manual
 ------
 
-Ensure that noob-arrows-mode.el is on the custom-theme-load-path like this: 
+Ensure that noob-arrows-mode.el is on the custom-theme-load-path and then require the package like this: 
 
 ```lisp
 (add-to-list 'custom-theme-load-path "~/path/to/noob-arrows-mode.el")
+(require 'noob-arrows-mode)
 ```
 
-You can then toggle the mode on/off at any time by running one of two commands:
-<code>M-x noob-arrows-mode</code>
-<code>M-x global-noob-arrows-mode</code>
+Next, you will need to either create a help file or use a premade file (one is included in this git repo). You must then set the variable <code>noob-arrows-help-file</code> as described above in your startup files. Restart Emacs and everythingYou can then toggle the mode on/off at any time by running one of two commands:
+<code>M-x noob-arrows-mode</code> or <code>M-x global-noob-arrows-mode</code>
 
-The first command will turn the minor mode on in the current buffer only. The second command will turn it on for all buffers.
+The first command will turn the minor mode on in the current buffer only. The second command will turn it on for all buffers. You can turn either version off by simply running the same command again.
 
 Bugs & Improvements
 ===================
