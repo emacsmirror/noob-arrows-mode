@@ -10,7 +10,7 @@ Usage
 
 The command <code>M-x noob-arrows-mode</code> will turn the minor mode on in the current buffer only. The command <code>M-x global-noob-arrows-mode</code> will turn it on for all buffers. You can turn either version off by simply running the same command again.
 
-After turning on the mode, pressing an arrow key will display a help buffer in the corresponding direction of the button press. Pressing another arrow key (or C-x 1) will hide the help buffer. The content of the help buffer is set by default, but can be overridden  determined by setting the variable <code>noob-arrows-help-file</code> (see Installation). Thus, you can customize the contents of the help buffer to your needs, and/or adjust its content as you begin to learn various commands.
+After turning on the mode, pressing an arrow key will display a help buffer in the corresponding direction of the button press. Pressing another arrow key (or C-x 1) will hide the help buffer. The content of the help buffer is set by default, but can be overridden by setting the variable <code>noob-arrows-help-file</code> (see Installation: Optional Settings). Thus, you can customize the contents of the help buffer to your needs, and/or adjust its content as you begin to learn various commands.
 
 Installation
 ============
