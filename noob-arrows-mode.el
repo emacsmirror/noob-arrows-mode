@@ -51,23 +51,40 @@
     ;; Else, display a custom message
     (progn
       (erase-buffer)
-      (insert "noob-arrows-mode is not properly set up!!!
+      (insert 
+"Point (cursor) Commands
+=======================
+C-f	: Forward character
+C-b	: Backward character
+M-f	: Forward word
+M-b	: Backward word
+C-a	: Move cursor to beginning of current line
+C-e	: Move cursor to end of current line
+M-a	: Backward sentence
+M-e	: Forward sentence
 
-For noob-arrows-mode to be useful, you should set the
-  variable noob-arrows-help-file to a file path containing an Emacs
-  help file. For example, in your startup files, add the following
-  line (replacing the string with a valid file path):
+Buffer & File Commands
+======================
+C-x C-f : Open file
+C-x C-s : Save current buffer
+C-x C-w : Save buffer as
+C-x b	: Switch buffers (default is last buffer visited)
+C-x C-b : List buffers
+C-x k	: Kill buffer (default is current buffer)
 
-(setq noob-arrows-help-file \"~/.emacs.d/plugins/noob-arrows-help-file.txt\")
-
-For more help, visit https://github.com/n3mo/noob-arrows-mode.el"))))
+Window Commands
+===============
+C-x 1	: Close all windows except the current window
+C-x 2	: Split current window horizontally
+C-x 3	: Split current window vertically
+C-x 0   : Close the current window
+C-x o   : Switch to next window"))))
 
 (defun noob-arrows-toggle-help (window-location)
   "Opens an Emacs keyboard shortcut guide in `window-location', which
 can be `above', `below', `left', or `right' the current
   window. Calling the function again hides the help window"
     (let ((calling-buffer (current-buffer))
-	  (helpfile noob-arrows-help-file)
 	  (help-window (get-buffer-window "emacs-help")))
       (save-excursion
 	(if (equal help-window nil)
