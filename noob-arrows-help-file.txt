@@ -1,0 +1,26 @@
+Point (cursor) Commands
+=======================
+
+C-f	: Forward character
+C-b	: Backward character
+M-f	: Forward word
+M-b	: Backward word
+C-a	: Move cursor to beginning of current line
+C-e	: Move cursor to end of current line
+M-a	: Backward sentence
+M-e	: Forward sentence
+
+Buffer & File Commands
+======================
+
+C-x C-s : Save current buffer
+C-x C-w : Save buffer as
+C-x b	: Switch buffers (default is last buffer visited)
+C-x C-b : List buffers
+C-x k	: Kill buffer (default is current buffer)
+
+Window Commands
+===============
+C-x 1	: Close all windows except the current window
+C-x 2	: Split current window horizontally
+C-x 3	: Split current window vertically
