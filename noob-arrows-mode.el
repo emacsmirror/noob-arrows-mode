@@ -38,8 +38,8 @@
 
 ;; This global variable determines which help file is visited by these
 ;; functions. This should be set in one of your init files:
-(setq noob-arrows-help-file
-      "~/.emacs.d/plugins/noob-arrows-mode.el/noob-arrows-help-file.txt")
+;; (setq noob-arrows-help-file
+;;       "~/.emacs.d/plugins/noob-arrows-mode.el/noob-arrows-help-file.txt")
 
 (defun noob-arrows-help-content ()
   (if (and 
@@ -72,7 +72,8 @@ can be `above', `below', `left', or `right' the current
       (save-excursion
 	(if (equal help-window nil)
 	  (progn
-	    (generate-new-buffer "emacs-help")
+	    (if (equal (get-buffer "emacs-help") nil)
+		(generate-new-buffer "emacs-help"))
 	    (switch-to-buffer "emacs-help")
 	    (cond 
 	     ((string= "left" window-location)
