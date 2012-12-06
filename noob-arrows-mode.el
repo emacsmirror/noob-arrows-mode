@@ -47,7 +47,9 @@
        (file-exists-p noob-arrows-help-file))
       ;; If the user has supplied a valid help file, insert the
       ;; contents of it into the help buffer
-      (insert-file-contents noob-arrows-help-file nil nil nil t)
+      (progn
+	(insert-file-contents noob-arrows-help-file nil nil nil t)
+	(goto-char (point-min)))
     ;; Else, display a custom message
     (progn
       (erase-buffer)
@@ -78,7 +80,12 @@ C-x 1	: Close all windows except the current window
 C-x 2	: Split current window horizontally
 C-x 3	: Split current window vertically
 C-x 0   : Close the current window
-C-x o   : Switch to next window"))))
+C-x o   : Switch to next window
+
+You can customize what is shown here by creating a file full of tips
+and adding the following line to your startup file (replace the text
+with an appropriate file path")
+      (goto-char (point-min)))))
 
 (defun noob-arrows-toggle-help (window-location)
   "Opens an Emacs keyboard shortcut guide in `window-location', which
