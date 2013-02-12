@@ -1,8 +1,8 @@
 ;;; noob-arrows-mode.el --- Noob arrows minor mode
 
-;; Copyright 2012, Nick Van Horn
+;; Copyright 2012, Nicholas M. Van Horn
 
-;; Author: Nick Van Horn <nemo1211@gmail.com>
+;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: noob, arrows, novice, help, training
 ;; Version: 1.0
 
