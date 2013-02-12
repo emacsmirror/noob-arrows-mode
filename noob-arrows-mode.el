@@ -84,7 +84,9 @@ C-x o   : Switch to next window
 
 You can customize what is shown here by creating a file full of tips
 and adding the following line to your startup file (replace the text
-with an appropriate file path")
+with an appropriate file path)
+
+(setq noob-arrows-help-file \"~/path/to/custom-help-file.txt\")")
       (goto-char (point-min)))))
 
 (defun noob-arrows-toggle-help (window-location)
