@@ -1,7 +1,7 @@
 noob-arrows-mode.el
 ===================
 
-Emacs training minor mode that replaces arrow key functionality with help services
+Emacs training minor mode that replaces arrow key functionality with help services.
 
 Activating noob-arrows-mode or global-noob-arrows-mode turns the arrow keys into help buttons. This forces the novice Emacs user to use alternative navigation techniques (not that this is necessarily inherently superior to using the arrow keys... but knowing how to do this can't hurt). The mode causes a help buffer to be shown whenever an arrow key is pressed, creating a convenient method for reminding users how to use Emacs core set of commands. The help window appears above, below, left, or right of the current window depending on which corresponding arrow key was pressed. Default help contents are provided, but users can optionally set an arbitrary file for creating new help tips (see Installation). Other useful key combinations such as C-up, C-down, etc. retain their original functionality. 
 
@@ -30,13 +30,13 @@ Restart Emacs and everything should be ready to use.
 Optional Settings
 -----------------
 
-If you would like to change the content of the help buffer you may do so by setting the variable <code>noob-arrows-help-file</code> in your startup files. To accomplish this you add the following lines to one of your startup file. You will need to substitute the code below with the appropriate file path:
+If you would like to change the content of the help buffer you may do so by setting the variable <code>noob-arrows-help-file</code> in your startup files. To accomplish this you add the following lines to one of your startup files. You will need to substitute the code below with the appropriate file path:
 
 ```lisp
 (setq noob-arrows-help-file "~/path/to/noob-arrows-help-file.txt")
 ``` 
 
-Once set, noob-arrows-mode will show the contents of specified help file in the popup buffer. The is useful when the user has successfully learned the core commands and would like to have new tips displayed instead. If this variable is unset, or if the file doesn't exist, the default help settings will be shown.
+Once set, noob-arrows-mode will show the contents of specified help file in the popup buffer. This is useful when the user has successfully learned the core commands and would like to have new tips displayed instead. If this variable is unset, or if the file doesn't exist, the default help settings will be shown.
 
 
 Bugs & Improvements
